@@ -1,0 +1,7 @@
+{
+  "name": "svgPlacement",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
