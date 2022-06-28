@@ -7,14 +7,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-button (click)="addSvg()">Add svg</ion-button>
+  <ion-list mode="ios" mode="md">
+    <ion-radio-group value="mode1" [(ngModel)]="mode">
+      <ion-list-header>
+        <ion-label>Change Mode</ion-label>
+      </ion-list-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-item lines="none">
+        <ion-label>Mode 1</ion-label>
+        <ion-radio slot="start" value="mode1" mode="md"></ion-radio>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Mode 2</ion-label>
+        <ion-radio slot="start" value="mode2" mode="md"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <div id="svgContainer">
+    <ion-icon id="svgIcon" src="./assets/balloon.svg"></ion-icon>
   </div>
 </ion-content>
